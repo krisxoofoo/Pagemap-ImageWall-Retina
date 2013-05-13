@@ -51,7 +51,7 @@ if(p_getMemoryLimit() < 5242880)
 	ini_set('memory_limit', 33554432);
 // SETTINGS
 global $set; if(empty($set)) $set = array();
-$set['script version'] = '1.2'; // Initial Build 2010-08-24 - Modified by XooFoo 2013-05-13
+$set['script version'] = '1.0';
 $set['script name'] = empty($set['script name']) ? $_SERVER['SCRIPT_NAME'] : $set['script name'];
 $set['script dir'] = empty($set['script dir']) ? './' : $set['script dir'];
 $set['cache dir'] = 'cache/';
