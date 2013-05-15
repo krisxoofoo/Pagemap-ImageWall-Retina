@@ -59,5 +59,8 @@ You are NOT allowed to:
 
 ### CHANGELOG
 
+v1.1 (Release 2013-05-15)
+Updated to Magnific Popup - v0.8.5
+
 v1.0 (Release 2013-05-13)
 First Release based on Pagemap ImageWall modified by kris
