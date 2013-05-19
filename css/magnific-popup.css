@@ -47,7 +47,7 @@ img.mfp-img {width: auto;max-width: 100%;height: auto;display: block;line-height
 .mfp-figure:after {content: '';position: absolute;left: 0;top: 40px;bottom: 40px;display: block;right: 0;width: auto;height: auto;z-index: -1;box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
 .mfp-figure {line-height: 0; }
 .mfp-bottom-bar {margin-top: -36px;position: absolute;top: 100%;left: 0;width: 100%;cursor: auto; }
-.mfp-title {text-align: left;line-height: 18px;color: #f3f3f3;padding-right: 36px;}
+.mfp-title {text-align: left;line-height: 18px;color: #f3f3f3;word-break: break-word;padding-right: 36px;}
 .mfp-figure small {color: #bdbdbd;display: block;font-size: 12px;line-height: 14px; }
 .mfp-image-holder .mfp-content {max-width: 100%;}
 .mfp-gallery .mfp-image-holder .mfp-figure {cursor: pointer; }

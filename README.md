@@ -59,6 +59,9 @@ You are NOT allowed to:
 
 ### CHANGELOG
 
+v1.2 (Release 2013-05-19)
+Updated to Magnific Popup - v0.8.7
+
 v1.1 (Release 2013-05-15)
 Updated to Magnific Popup - v0.8.5
 
