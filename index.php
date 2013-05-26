@@ -179,12 +179,12 @@ function mulit($count, $page, $perpage) {
 	while($allpage) {
 		$class = '';
 		if ($i == $page) {
-			$class = 'class = "current"'; 
+			$class = ' class="current"'; 
 		}
 		if ($dir) {
-			$pager .= "<a href='?dir=$dir&page=$i' ><em $class>";
+			$pager .= "<a href='?dir=$dir&page=$i' ><em$class>";
 		} else {
-			$pager .= "<a rel='tooltip' href='?page=$i' title='Go to page $i'><em $class>";    
+			$pager .= "<a rel='tooltip' href='?page=$i' title='Go to page $i'><em$class>";    
 		}
 		$pager .= "$i";
 		$pager .= "</em></a>";
