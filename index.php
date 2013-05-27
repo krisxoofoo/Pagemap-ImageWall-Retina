@@ -318,7 +318,7 @@ if(empty($config['Images List'])) {
 		p_message('Your image list respectively a file with name <strong>' . $config['Images List'] . '</strong> cannot be found.');
 		$config['Images List'] = '';
 	}
-	if(stristr($config['Images List'], '.ini'))
+	if(stristr($config['Images List'], '.txt'))
 		$config['Images List'] = is_file($config['Images List']) ? file_get_contents($config['Images List']) : '';
 	$images = empty($config['Images List']) ? array() : explode(',', $config['Images List']);
 	for($i = 0; $i < count($images); $i++) $images[$i] = trim($images[$i]);
@@ -330,7 +330,6 @@ $allpage = ceil(count($images) / $config['Per Page']);
 if ($page > $allpage) {
 	$page = $allpage;    
 }
-
 $start = ($page - 1) * $config['Per Page'];
 $mulit = mulit(count($images), $page, $config['Per Page']);
 $images = array_slice($images, $start, $config['Per Page']);
@@ -440,11 +439,9 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 		</div>
 		<?php if($mulit) echo $mulit;?>
 		<?php if(!empty($config['Disqus Shortname'])) { ?>
-		<!-- disqus -->
 		<div id="disqus_thread"></div>
 		<script>
 			var disqus_shortname = '<?php echo $config['Disqus Shortname']; ?>';
-			/* * * DON'T EDIT BELOW THIS LINE * * */
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
@@ -472,8 +469,8 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 <script src="js/zepto-tooltip.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <?php if(!empty($config['Other JS'])) { ?><script src="<?php echo $config['Other JS']; ?>"></script><?php } ?>
+
 <script>
-/* Init gallery */
 $(document).ready(function() {
 	$('.popup-gallery').magnificPopup({
 	  delegate: 'a',
@@ -483,7 +480,7 @@ $(document).ready(function() {
 	  gallery: {
 		enabled: true,
 		navigateByImgClick: true,
-		preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		preload: [0,1]
 	  },
 	  image: {
 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
@@ -496,7 +493,6 @@ $(document).ready(function() {
 </script>
 <?php if(!empty($config['GoogleAnalytics Account'])) { ?>
 <script>
-<!-- ga -->
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '<?php echo $config['GoogleAnalytics Account']; ?>']);
   _gaq.push(['_trackPageview']);
