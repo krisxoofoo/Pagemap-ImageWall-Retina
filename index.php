@@ -397,7 +397,7 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 		#imagewall { max-width: <?php echo $config['ImageWall Width']; ?>; margin: 0 auto; text-align: center; line-height: 0; font-size: 0; }
 		#imagewall img { margin: 1px; }
 		#imagewall-container {clear:both;}
-		#imagewall-container a img {border: none; box-shadow: 0 0 10px rgba(0,0,0,0.5) ; background: #fff; border-radius: 5px; padding:8px; margin:6px !important; width: <?php echo p_getThumbnailSize($config['Thumbnail Size']); ?>; height: <?php echo p_getThumbnailSize($config['Thumbnail Size']); ?>;}
+		#imagewall-container a img {border: none; box-shadow: 0 0 10px rgba(0,0,0,0.5) ; background: #fff; border-radius: 5px; padding:8px; margin:6px !important; width: <?php echo p_getThumbnailSize($config['Thumbnail Size']); ?>px; height: <?php echo p_getThumbnailSize($config['Thumbnail Size']); ?>px;}
 		#imagewall-container a img:hover {-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out;-o-transition: all 0.4s ease-in-out;transition: all 0.4s ease-in-out;-webkit-transform: rotate(10deg);-moz-transform: rotate(10deg);-o-transform: rotate(10deg);transform: rotate(10deg); opacity:.5;cursor: pointer;cursor: -webkit-zoom-in;cursor: -moz-zoom-in;cursor: zoom-in; }
 		#mulit li {list-style:none;}
 		#mulit {font-size:12px;text-align:center;padding: 0 0 10px 0;margin: 30px 0 10px 0;}
