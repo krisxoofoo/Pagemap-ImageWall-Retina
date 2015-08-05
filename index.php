@@ -2,7 +2,6 @@
 /*
 	Pagemap ImageWall Web Gallery
 	Copyright by Pagemap Premium Portfolios. All Rights reserved.
-	http://getpagemap.com/pagemap-imagewall/
 	Version "Retina" adapted by kris - http://www.xoofoo.org
 */
 /* add little cache - credits: Rafael Paulino - http://www.phpclasses.org/package/5595-PHP-Cache-the-output-of-pages-into-files.html */
@@ -62,7 +61,7 @@ $set['color names'] = array('aliceblue' => '#f0f8ff', 'antiquewhite' => '#faebd7
 $config = array();
 $config['Author'] = '';
 $config['Gallery Title'] = 'My gallery';
-$config['Gallery Description'] = 'Pagemap ImageWall by Pagemap Premium Portfolios';
+$config['Gallery Description'] = 'Pagemap ImageWall Retina by XooFoo';
 $config['Meta Keywords'] = 'gallery, photos, holidays';
 $config['Thumbnail Cropped'] = 'on';
 $config['Thumbnail Quality'] = 80;
@@ -90,7 +89,7 @@ $config['Exclude Images'] = '';
 $config['Disqus Shortname'] = '';
 $config['GoogleAnalytics Account'] = '';
 $config['Per Page'] = '24';
-$set['image overlay'] = 'R0lGODlhIAAgAJEAAAAAADMzMyEhIQAAACH5BAQUAP8ALAAAAAAgACAAAAJvTACGmtfrGBMCUVvB1Xn7DIXPKEUmhnLptwql+JKnSrN1hyPwHPeODczdfLviKNhK0oxEmQh5U1Ka1Bn0KmTytk8htlXVdqXess6JDkfXWLX6y86muXOyfUh3/8xxpbiOBteWRzjWd7jxp3cnKFAAADs=';
+//$set['image overlay'] = 'R0lGODlhIAAgAJEAAAAAADMzMyEhIQAAACH5BAQUAP8ALAAAAAAgACAAAAJvTACGmtfrGBMCUVvB1Xn7DIXPKEUmhnLptwql+JKnSrN1hyPwHPeODczdfLviKNhK0oxEmQh5U1Ka1Bn0KmTytk8htlXVdqXess6JDkfXWLX6y86muXOyfUh3/8xxpbiOBteWRzjWd7jxp3cnKFAAADs=';
 // SET CONFIG
 if(is_file($set['config file']) && is_readable($set['config file'])) {
 	// Get config from Config File
@@ -376,7 +375,7 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 	<title><?php echo strip_tags($config['Gallery Title']); ?></title>
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 	<link rel="start" title="Home Page" href="<?php echo $config['Home Page']; ?>" />
-	<link rel="help" title="Pagemap Premium Portfolios" href="http://getpagemap.com/pagemap-imagewall/" />
+	<link rel="help" title="Pagemap Portfolios" href="https://github.com/krisxoofoo/Pagemap-ImageWall-Retina" />
 	<style type="text/css">
 		html { height: 100%;}
 		* {  margin: 0; padding: 0;}
@@ -392,7 +391,6 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 <?php } ?>
 	<style type="text/css">
 		/* GALLERY */
-		.mfp-bg { background: #0b0b0b url('<?php echo $set['script name']; ?>?symbol=overlay') repeat !important; }
 		p.error { width: 550px; margin: 50px auto; font-size: 14px; line-height:1.5em; text-align:center;}
 		#imagewall { max-width: <?php echo $config['ImageWall Width']; ?>; margin: 0 auto; text-align: center; line-height: 0; font-size: 0; }
 		#imagewall img { margin: 1px; }
@@ -406,7 +404,6 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 		#mulit a {color:#999;text-decoration:none;}
 	</style>
 	<link rel="stylesheet" href="css/magnific-popup.css" />
-	<link rel="stylesheet" href="css/zepto-tooltip.css" />
 	<?php if(!empty($config['Custom FileCSS'])) { ?>
 		<link rel="stylesheet" href="<?php echo $config['Custom FileCSS']; ?>">
 	<?php } ?>
@@ -457,16 +454,18 @@ if($config['Embedded Script'] == 'off' || headers_sent() == false) header('conte
 <?php if($config['Embedded Script'] == 'off') { ?>
 	<footer>
 		<nav><?php if(!empty($config['Home Page'])) { ?><a rel="tooltip" href="<?php echo $config['Home Page']; ?>" title="Go to the home page">Home</a><?php } ?><?php if(!empty($config['Contact'])) { ?> • <a rel="tooltip" href="<?php echo $config['Contact']; ?>" title="Contact us">Contact</a><?php } ?><?php if(!empty($config['Imprint'])) { ?> • <a rel="tooltip" href="<?php echo $config['Imprint']; ?>" title="Imprint this page">Imprint</a> <?php } ?></nav><?php if(!empty($config['Author'])) { ?><p>Photos by <strong><?php echo $config['Author']; ?></strong> - Copyright © 2013 - All rights reserved.</p><?php } ?>
-		<p>Powered by <a rel="tooltip" href="http://getpagemap.com/pagemap-imagewall/" title="A free web gallery script for portfolio websites"><strong>Pagemap ImageWall</strong></a> adapted by <a rel="tooltip" href="http://www.xoofoo.org/" title="XooFoo Websites"><strong>XooFoo</strong></a></p>
+		<p>Powered by <strong>Pagemap ImageWall</strong> adapted by <a rel="tooltip" href="http://www.xoofoo.org/" title="XooFoo Websites"><strong>XooFoo</strong></a></p>
 	</footer>
 <?php } ?>
 </div>
 <script>
-	document.write('<script src=js/' +
-	('__proto__' in {} ? 'zepto' : 'jquery') +
-	'.min.js><\/script>')
+	if(top.execScript){ // true only in IE
+		document.write("<script src='js/jquery.min.js'>\x3C/script>");
+	}
+	else{
+		document.write("<script src='js/zepto.min.js'>\x3C/script>");
+	}
 </script>
-<script src="js/zepto-tooltip.min.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <?php if(!empty($config['Other JS'])) { ?><script src="<?php echo $config['Other JS']; ?>"></script><?php } ?>
 
