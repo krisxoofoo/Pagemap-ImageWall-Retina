@@ -2,7 +2,7 @@ Pagemap Imagewall Retina
 ************************
 
 ### ABOUT
-Pagemap ImageWall Retina is a web gallery script, free for private and commercial use, originally developed by Pagemap Premium Portfolios in Germany, and adapted for mobile devices (& retina screen) by Kris
+Pagemap ImageWall Retina is a web gallery script, free for private and commercial use, originally developed by Nico Wenig for Pagemap Premium Portfolios in Germany, and adapted for mobile devices (& retina screen) by Kris
 
 Demo kris : http://test.xoofoo.org/pagemapretina/
 
@@ -32,7 +32,6 @@ If you are having problems installing or using Pagemap Imagewall Retina, please 
 
 ### LEGAL INFORMATION
 Pagemap Imagewall is originally written by Nico Wenig
-Copyright © 2010 by Pagemap Premium Portfolios. All rights reserved.
 
 The software is provieded as is, without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from
 out of or in connectioin with the software or the use of other dealings in the software.
@@ -44,7 +43,6 @@ You are allows to:
 - Customize the function and design
 
 You are NOT allowed to:
-- Delete the link to getpagemap.com in the footer
 - Claim the script as your own
 - Sale parts of the script
 
