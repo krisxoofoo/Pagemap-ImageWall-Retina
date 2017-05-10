@@ -4,7 +4,7 @@ Pagemap Imagewall Retina
 ### ABOUT
 Pagemap ImageWall Retina is a web gallery script, free for private and commercial use, originally developed by Nico Wenig for Pagemap Premium Portfolios in Germany, and adapted for mobile devices (& retina screen) by Kris
 
-Demo kris : http://test.xoofoo.org/pagemapretina/
+Demo kris : https://xoofoo.org/demo/pagemapretina/
 
 ### SYSTEM REQUIREMENTS
 - Apache Webserver (recommended) or IIS
